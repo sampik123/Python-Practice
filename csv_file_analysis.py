@@ -59,8 +59,16 @@ for subject, marks in subject_marks.items():
 
 
 # total marks of each student
-for student_name, marks in student_total.items():
-    print('Total Marks of', student_name, '---> ', marks)
+topper = None
+highest_marks = -1
+
+for student, total_marks in student_total.items():
+    if total_marks > highest_marks:
+        highest_marks = total_marks 
+        topper = student 
+
+print(f"Overall Topper: {topper} with total marks of {highest_marks}")
+
         
 
 
